@@ -15,7 +15,6 @@ async function main() {
 
   // If links is null, get wine data from baseLink
   if (!links) {
-    console.log("here")
     const wineData = await getWineData(baseLink)
     saveWineData(wineData)
   } else {

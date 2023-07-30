@@ -16,8 +16,8 @@ const getWineData = async link => {
           price: e.querySelector('.fp-col-item-details .fp-item-sale-price').innerText || '',
           base_price: e.querySelector('.fp-col-item-details .fp-item-base-price') ? e.querySelector('.fp-col-item-details .fp-item-base-price').innerText : '',
           image: e.querySelector('.fp-col-item-image .fp-item-image img').src || '',
-          rating: e.querySelector('.fp-col-item-details .fp-review-rating') ? e.querySelector('.fp-col-item-details .fp-review-rating').innerText : '',
-          description: e.querySelector('.fp-col-item-details .fp-item-description-content') ? e.querySelector('.fp-col-item-details .fp-item-description-content').children[1].innerText : '',
+          rating: e.querySelector('.fp-col-item-details .fp-review-rating') ? e.querySelector('.fp-col-item-details .fp-review-rating').innerText : e.querySelector('.fp-col-item-details .fp-review-count'),
+          description: e.querySelector('.fp-col-item-details .fp-item-description-content').children[1] ? e.querySelector('.fp-col-item-details .fp-item-description-content').children[1].innerText : '',
           on_hand: e.querySelector('.fp-col-item-details .fp-item-quantity-on-hand') ? e.querySelector('.fp-col-item-details .fp-item-quantity-on-hand').innerText : '',
           sku: e.querySelector('.fp-item-description .fp-item-upc .fp-item-tag-value') ? e.querySelector('.fp-item-description .fp-item-upc .fp-item-tag-value').innerText : '',
           type: e.querySelector('.fp-item-description .fp-product-tags').children[1].children[1].children[0] ? e.querySelector('.fp-item-description .fp-product-tags').children[1].children[1].children[0].innerText : '',
@@ -25,7 +25,7 @@ const getWineData = async link => {
           region: e.querySelector('.fp-item-description .fp-product-tags').children[3].children[1].children[0] ? e.querySelector('.fp-item-description .fp-product-tags').children[3].children[1].children[0].innerText : '',
           size: e.querySelector('.fp-item-description .fp-product-tags').children[4].children[1].children[0] ? e.querySelector('.fp-item-description .fp-product-tags').children[4].children[1].children[0].innerText : '',
           country: e.querySelector('.fp-item-description .fp-product-tags').children[5].children[1].children[0] ? e.querySelector('.fp-item-description .fp-product-tags').children[5].children[1].children[0].innerText : '',
-          appellation: e.querySelector('.fp-item-description .fp-product-tags').children[6].children[1].children[0] ? e.querySelector('.fp-item-description .fp-product-tags').children[6].children[1].children[0].innerText : ''
+          appellation: e.querySelector('.fp-item-description .fp-product-tags').children[6] ? e.querySelector('.fp-item-description .fp-product-tags').children[6].children[1].children[0].innerText : ''
         }
       })
     })
